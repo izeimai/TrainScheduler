@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- My own CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <!-- Moment -->
+    <script src="https://unpkg.com/moment"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron bg-dark">
+            <h1 class="display-3 text-light text-center">Anytime is Train Time</h1>
+            <h3 class="text-light text-center">Choo choo train</h3>
+
+        </div>
+
+        <table class="table table-hover">
+            <p>Current Train Schedule</p>
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trenton Express</td>
+                    <td>Trenton</td>
+                    <td>25</td>
+                    <td>05:35PM</td>
+                    <td>10</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <br>
+
+        <p>Add Train</p>
+        <form role="form">
+            <div class="form-group">
+                <label for="name-input">Train Name</label>
+                <input class="form-control" id="name-input" type="text">
+            </div>
+            <div class="form-group">
+                <label for="destination-input">Destination</label>
+                <input class="form-control" id="destination-input" type="text">
+            </div>
+            <div class="form-group">
+                <label for="time-input">First Train Time (HH:mm -military time)</label>
+                <input class="form-control" id="time-input" type="text">
+            </div>
+            <div class="form-group">
+                <label for="frequency-input">Frequency (min)</label>
+                <input class="form-control" id="frequency-input" type="number"></input>
+            </div>
+            <button class="btn btn-dark btn-lg" id="add-train" type="submit">Submit</button>
+        </form>
+
+
+    </div>
+
+        <!-- JavaScript -->
+        <script src="app.js"></script>
+
+</body>
+
+</html>
